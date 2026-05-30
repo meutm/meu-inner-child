@@ -57,7 +57,7 @@
           </div>
           <div class="mini-proof" aria-label="Campaign highlights">
             <span>Private by design</span>
-            <span>Square PNG export</span>
+            <span>3 export formats</span>
             <span>Share-ready</span>
           </div>
         </div>
@@ -85,6 +85,59 @@
             </div>
           </div>
 
+          <section class="format-studio" aria-labelledby="format-title">
+            <div class="format-heading">
+              <div>
+                <p class="eyebrow">Export formats</p>
+                <h3 id="format-title">Choose what you want to create.</h3>
+              </div>
+              <button class="small-button" id="selectAllFormatsButton" type="button">
+                Select all
+              </button>
+            </div>
+            <div class="format-grid" role="group" aria-label="Available export formats">
+              <article class="format-card is-active" data-format-card="print">
+                <label>
+                  <input type="checkbox" value="print" data-format-option checked>
+                  <span>
+                    <strong>Print / original</strong>
+                    <small>Square, high-resolution campaign frame.</small>
+                  </span>
+                </label>
+                <button class="format-preview" type="button" data-preview-format="print">
+                  Preview
+                </button>
+              </article>
+              <article class="format-card" data-format-card="post">
+                <label>
+                  <input type="checkbox" value="post" data-format-option checked>
+                  <span>
+                    <strong>Instagram post</strong>
+                    <small>4:5 feed-ready portrait export.</small>
+                  </span>
+                </label>
+                <button class="format-preview" type="button" data-preview-format="post">
+                  Preview
+                </button>
+              </article>
+              <article class="format-card" data-format-card="story">
+                <label>
+                  <input type="checkbox" value="story" data-format-option checked>
+                  <span>
+                    <strong>Instagram story</strong>
+                    <small>9:16 vertical story export.</small>
+                  </span>
+                </label>
+                <button class="format-preview" type="button" data-preview-format="story">
+                  Preview
+                </button>
+              </article>
+            </div>
+            <p class="format-hint" id="formatHint">
+              Previewing Print / original. All formats selected.
+            </p>
+          </section>
+
           <div class="upload-zone" id="dropZone">
             <input id="photoInput" type="file" accept="image/png,image/jpeg,image/webp">
             <label for="photoInput">
@@ -109,7 +162,10 @@
 
           <div class="studio-actions">
             <button class="button primary" id="downloadButton" type="button" disabled>
-              Download PNG
+              Download preview
+            </button>
+            <button class="button secondary" id="downloadSelectedButton" type="button" disabled>
+              Download selected
             </button>
             <button class="button secondary" id="shareButton" type="button">
               Share challenge
@@ -154,7 +210,7 @@
             <span class="step-number">02</span>
             <h3>Tune the portrait</h3>
             <p>
-              Drag, zoom and reset until the composition feels like a small
+              Drag, zoom and export until the composition feels like a small
               memory with a big voice.
             </p>
           </article>
@@ -202,7 +258,8 @@
           <textarea id="captionText" rows="13" spellcheck="false"></textarea>
           <div class="caption-side">
             <p>
-              Add your names, copy the caption, and share your framed photo with the campaign hashtags.
+              Add the names, paste your GitHub Pages link, then post the final
+              image with the campaign hashtags.
             </p>
             <button class="button primary" type="button" data-copy-caption>
               Copy caption
