@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Give the Floor to Your Inner Child | MEU Timisoara</title>
+    <meta
+      name="description"
+      content="Create your MEU Timisoara June 1st campaign frame. Upload a childhood photo, position it in the illustrated frame, download it, and share the challenge."
+    >
+    <meta name="theme-color" content="#083f9f">
+    <meta property="og:title" content="Give the Floor to Your Inner Child">
+    <meta
+      property="og:description"
+      content="A June 1st challenge by MEU Timisoara. Before we debated Europe, we imagined it."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/frame.png">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@500;600;700;800;900&family=Schoolbell&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="MEU Timisoara home">
+        <img src="assets/logo.png" alt="MEU Timisoara logo">
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#studio">Create</a>
+        <a href="#story">Story</a>
+        <a href="#caption">Caption</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-band" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">MEU Timisoara / June 1st Challenge</p>
+          <h1 id="hero-title">Give the floor to your inner child.</h1>
+          <p class="lead">
+            Before we spoke about Europe, democracy and public policy, we were
+            children asking big questions about the world.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#studio">Create your frame</a>
+            <button class="button secondary" type="button" data-copy-caption>
+              Copy caption
+            </button>
+          </div>
+          <div class="mini-proof" aria-label="Campaign highlights">
+            <span>Private by design</span>
+            <span>Square PNG export</span>
+            <span>Share-ready</span>
+          </div>
+        </div>
+
+        <section class="studio-panel" id="studio" aria-labelledby="studio-title">
+          <div class="studio-heading">
+            <div>
+              <p class="eyebrow">Frame studio</p>
+              <h2 id="studio-title">Build your campaign portrait.</h2>
+            </div>
+            <span class="privacy-chip">Local only</span>
+          </div>
+
+          <div class="canvas-shell">
+            <canvas id="previewCanvas" width="1254" height="1254" aria-label="Campaign frame preview"></canvas>
+            <label class="canvas-upload-button" for="photoInput">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 16V4m0 0 5 5m-5-5-5 5"></path>
+                <path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"></path>
+              </svg>
+              <span>Upload photo</span>
+            </label>
+            <div class="canvas-status" id="canvasStatus" aria-live="polite">
+              Upload to reveal the frame
+            </div>
+          </div>
+
+          <div class="upload-zone" id="dropZone">
+            <input id="photoInput" type="file" accept="image/png,image/jpeg,image/webp">
+            <label for="photoInput">
+              <span class="upload-button">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 16V4m0 0 5 5m-5-5-5 5"></path>
+                  <path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"></path>
+                </svg>
+                Upload photo
+              </span>
+              <span class="upload-copy">JPG, PNG or WEBP. Your photo never leaves this browser.</span>
+            </label>
+          </div>
+
+          <div class="tool-row">
+            <label class="range-control" for="zoomRange">
+              <span>Zoom</span>
+              <input id="zoomRange" type="range" min="1" max="2.8" value="1" step="0.01" disabled>
+            </label>
+            <button class="small-button" id="resetButton" type="button" disabled>Reset</button>
+          </div>
+
+          <div class="studio-actions">
+            <button class="button primary" id="downloadButton" type="button" disabled>
+              Download PNG
+            </button>
+            <button class="button secondary" id="shareButton" type="button">
+              Share challenge
+            </button>
+            <button class="button social facebook" type="button" data-share-facebook aria-label="Share on Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14.1 8.5H16V5.3c-.9-.1-1.8-.2-2.7-.2-2.7 0-4.5 1.6-4.5 4.6v2.6H6v3.6h2.8V23h3.8v-7.1h3l.5-3.6h-3.5V10c0-1 .3-1.5 1.5-1.5Z"></path>
+              </svg>
+              <span>Facebook</span>
+            </button>
+            <button class="button social instagram" type="button" data-share-instagram aria-label="Open Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="4" width="16" height="16" rx="5"></rect>
+                <circle cx="12" cy="12" r="3.4"></circle>
+                <circle cx="16.8" cy="7.2" r="1"></circle>
+              </svg>
+              <span>Instagram</span>
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <section class="statement-band" aria-label="Campaign statement">
+        <p>Before Europe becomes policy, it is imagined.</p>
+      </section>
+
+      <section class="story section-band" id="story" aria-labelledby="story-title">
+        <div class="section-intro">
+          <p class="eyebrow">The idea</p>
+          <h2 id="story-title">A civic challenge with a childhood pulse.</h2>
+        </div>
+        <div class="story-grid">
+          <article>
+            <span class="step-number">01</span>
+            <h3>Upload the photo</h3>
+            <p>
+              Choose a childhood picture from your device and place it inside
+              the official MEU illustrated frame.
+            </p>
+          </article>
+          <article>
+            <span class="step-number">02</span>
+            <h3>Tune the portrait</h3>
+            <p>
+              Drag, zoom and reset until the composition feels like a small
+              memory with a big voice.
+            </p>
+          </article>
+          <article>
+            <span class="step-number">03</span>
+            <h3>Pass it forward</h3>
+            <p>
+              Download the final square image, post it, and invite someone else
+              to give the floor to their inner child.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="context section-band" aria-labelledby="context-title">
+        <div class="context-copy">
+          <p class="eyebrow">Why June 1st</p>
+          <h2 id="context-title">A local moment, framed with care.</h2>
+          <p>
+            June 1st is Children’s Day in Romania and in several European
+            countries. While the United Nations marks World Children’s Day on
+            November 20, we are using this June 1st moment to celebrate the
+            childlike curiosity behind every civic voice.
+          </p>
+          <p>
+            It is an invitation to remember the curiosity behind every civic
+            voice: the child who asked why, imagined differently, and believed
+            that better worlds could be built.
+          </p>
+        </div>
+        <div class="context-poster" aria-hidden="true">
+          <span>why?</span>
+          <span>what if?</span>
+          <span>can we?</span>
+          <span>yes.</span>
+        </div>
+      </section>
+
+      <section class="caption section-band" id="caption" aria-labelledby="caption-title">
+        <div class="section-intro">
+          <p class="eyebrow">Post copy</p>
+          <h2 id="caption-title">Caption ready for the challenge.</h2>
+        </div>
+        <div class="caption-layout">
+          <textarea id="captionText" rows="13" spellcheck="false"></textarea>
+          <div class="caption-side">
+            <p>
+              Add the names, paste your GitHub Pages link, then post the final
+              image with the campaign hashtags.
+            </p>
+            <button class="button primary" type="button" data-copy-caption>
+              Copy caption
+            </button>
+            <div class="caption-share">
+              <button class="button secondary icon-button" type="button" data-share-facebook>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14.1 8.5H16V5.3c-.9-.1-1.8-.2-2.7-.2-2.7 0-4.5 1.6-4.5 4.6v2.6H6v3.6h2.8V23h3.8v-7.1h3l.5-3.6h-3.5V10c0-1 .3-1.5 1.5-1.5Z"></path>
+                </svg>
+                <span>Share on Facebook</span>
+              </button>
+              <button class="button secondary icon-button" type="button" data-share-instagram>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="4" y="4" width="16" height="16" rx="5"></rect>
+                  <circle cx="12" cy="12" r="3.4"></circle>
+                  <circle cx="16.8" cy="7.2" r="1"></circle>
+                </svg>
+                <span>Open Instagram</span>
+              </button>
+            </div>
+            <p class="hashtags">
+              #MEUTimisoara #GiveTheFloor #InnerChild
+              #EuropeStartsWithQuestions
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="assets/logo.png" alt="MEU Timisoara logo">
+      <p>
+        Model European Union Timisoara. A civic simulation about Europe,
+        democracy and the power of young voices.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
