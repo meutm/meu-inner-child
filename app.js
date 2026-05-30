@@ -73,19 +73,14 @@ const state = {
 const defaultCaption = () => {
   const link = window.location.protocol === "file:" ? "[link]" : window.location.href.split("#")[0];
 
-  return `June 1st is Children’s Day in Romania and in several European countries. While the United Nations marks World Children’s Day on November 20, we are using this June 1st moment to celebrate the childlike curiosity behind every civic voice.
+  return `Before I talked about Europe, democracy or change, I was a child asking big questions about the world.
 
-MEU Timișoara launches “Give the floor to your inner child”, a June 1st challenge reminding us that before we spoke about Europe, democracy and public policy, we were children asking big questions about the world.
+I’m joining MEU Timisoara’s “Give the floor to your inner child” challenge.
 
-I’m joining the challenge because every delegate, policymaker, journalist, negotiator or changemaker was once a child with imagination, curiosity and the courage to believe things could be different.
-
-Challenge accepted from: [names]
-
+Challenge accepted from: [name]
 I’m passing it on to: [names]
 
-Upload your childhood photo, create your MEU frame and give the floor to your inner child.
-
-Frame generator: ${link}
+Create yours: ${link}
 
 #MEUTimisoara #GiveTheFloor #InnerChild #EuropeStartsWithQuestions`;
 };
