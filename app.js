@@ -92,8 +92,7 @@ zoomRange.addEventListener("input", () => {
 
 resetButton.addEventListener("click", () => {
   if (!state.photo) return;
-  fitPhotoToWindow();
-  render();
+  clearPhoto();
 });
 
 downloadButton.addEventListener("click", () => {
@@ -236,6 +235,28 @@ function loadPhoto(file) {
     canvasStatus.textContent = "This image could not be opened";
   };
   img.src = state.photoUrl;
+}
+
+function clearPhoto() {
+  cancelAnimationFrame(state.revealFrame);
+  if (state.photoUrl) URL.revokeObjectURL(state.photoUrl);
+
+  state.photo = null;
+  state.photoUrl = "";
+  state.zoom = 1;
+  state.offsetX = 0;
+  state.offsetY = 0;
+  state.dragStart = null;
+  state.revealStart = 0;
+
+  photoInput.value = "";
+  zoomRange.value = "1";
+  zoomRange.disabled = true;
+  resetButton.disabled = true;
+  downloadButton.disabled = true;
+  canvasStatus.textContent = "Upload to reveal the frame";
+
+  render();
 }
 
 function detectTransparentWindow(frame) {
